@@ -38,7 +38,7 @@ Here are some of your options:
  4) Use an Android Virtual Device based on an ARM system image
    (This is 10x slower than hardware accelerated virtualization)
 
-**Option 1) Using a physical android phone:**
+**Option 1. Using a physical android phone:**
 
 1. Plug in your device to your computer.
 
@@ -66,7 +66,7 @@ Here are some of your options:
      *make sure your android device stays “Active” with a lit up screen so that the computer can use it as a simulator.
   
   
-### Options 2, 3, 4)
+### Options 2. 3. 4.
 
 **NOTE**
 Android Studio emulator won't run on Windows with an AMD processor. The error message is kind of misleading, as it suggests the problem is with the CPU. But it is within the troubleshoot message: "Windows/OSX computer with an Intel processor".
