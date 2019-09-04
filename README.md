@@ -1,37 +1,79 @@
-## Welcome to GitHub Pages
+## Windows and Android integration with Flutter docs
 
-You can use the [editor on GitHub](https://github.com/Mstapleton22/windows-android-docs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Install the following:
+[Android Studio](https://developer.android.com/studio/) 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[SDK Tools](https://developer.android.com/studio/releases/sdk-tools.html)
 
-### Markdown
+Once these two things are installed, you can go ahead and install [flutter](https://github.com/Chimer2017/xdemo_flutter) (crucial)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Inside Android Studios follow these steps:
+1. Go To...
 
-```markdown
-Syntax highlighted code block
+   1. Studio
+   1. File
+   1. Settings 
+   1. Plugins
+   1. Browse Repositories
+2. Search for flutter.
+3. Tap on Install (a dialog will pop regarding dart dependency. click Yes).
+4. Once the installation is finished restart android studio.
 
-# Header 1
-## Header 2
-### Header 3
+### For the simulator:
 
-- Bulleted
-- List
+**If**
 
-1. Numbered
-2. List
+you have a windows machine that supports Intel processor that supports VT-x and NX,
+follow [this documentation](https://developer.android.com/studio/run/managing-avds) to set up the simulator device.
 
-**Bold** and _Italic_ and `Code` text
+**Else**
 
-[Link](url) and ![Image](src)
-```
+You will be prompted with the following error:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Unfortunately, your computer does not support hardware accelerated virtualization.
+Here are some of your options:
+ 1) Use a physical device for testing (demonstration below)
+ 2) Develop on a Windows/OSX computer with an Intel processor that supports VT-x and NX
+ 3) Develop on a Linux computer that supports VT-x or SVM
+ 4) Use an Android Virtual Device based on an ARM system image
+   (This is 10x slower than hardware accelerated virtualization)
 
-### Jekyll Themes
+**Option 1) Using a physical android phone:**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Mstapleton22/windows-android-docs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Plug in your device to your computer.
 
-### Support or Contact
+2. Using the physical android phone/tablet:
+    1. Settings
+    1. About phone
+    1. Software information
+    1. TAP “build number” 8 times.
+    1. Type in pin.
+    1. Developer mode will be initialized.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+3. **Return to settings level** under the “about phone” folder you will see **developer options**.
+
+4. Turn developer option **ON** and make sure **USB DEBUGGING** is **ON**.
+
+5. In terminal **run flutter doctor**.
+
+6. **Return to android device** click ok to **Allow USB Debugging with Computer RSA key fingerprint / access code.**
+    - If you are still not seeing the fingerprint confirmation, use this [relevant article](https://www.thecustomdroid.com/enable-developer-options-usb-debugging-android-pie/) to follow the order of operations.
+
+7. In terminal **run flutter doctor**.
+   - Device should be visible from the terminal (flutter doctor) at this point.
+ 
+8. Run **flutter run** - 
+     *make sure your android device stays “Active” with a lit up screen so that the computer can use it as a simulator.
+  
+  
+### Options 2, 3, 4)
+
+**NOTE**
+Android Studio emulator won't run on Windows with an AMD processor. The error message is kind of misleading, as it suggests the problem is with the CPU. But it is within the troubleshoot message: "Windows/OSX computer with an Intel processor".
+
+Solutions could be installing Linux and running Android Studio on that (which might come with its own issues), using a physical device for testing or using the slow ARM images.
+
+**Recommended**
+Use an android device if it is possible.
+Othewise
+Download the linux machine and have fun :)
