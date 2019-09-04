@@ -32,10 +32,10 @@ You will be prompted with the following error:
 
 Unfortunately, your computer does not support hardware accelerated virtualization.
 Here are some of your options:
-   1) Use a physical device for testing (demonstration below)
-   2) Develop on a Windows/OSX computer with an Intel processor that supports VT-x and NX
-   3) Develop on a Linux computer that supports VT-x or SVM
-   4) Use an Android Virtual Device based on an ARM system image
+     1. Use a physical device for testing (demonstration below)
+     2. Develop on a Windows/OSX computer with an Intel processor that supports VT-x and NX
+     3. Develop on a Linux computer that supports VT-x or SVM
+     4. Use an Android Virtual Device based on an ARM system image
    (This is 10x slower than hardware accelerated virtualization)
 
 **Option 1. Using a physical android phone:**
