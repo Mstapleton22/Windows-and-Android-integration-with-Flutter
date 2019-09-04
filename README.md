@@ -1,5 +1,3 @@
-## Windows and Android integration with Flutter
-
 ### Install the following:
 [Android Studio](https://developer.android.com/studio/) 
 
