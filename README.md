@@ -74,6 +74,6 @@ Android Studio emulator won't run on Windows with an AMD processor. The error me
 Solutions could be installing Linux and running Android Studio on that (which might come with its own issues), using a physical device for testing or using the slow ARM images.
 
 **Recommended**
-Use an android device if it is possible.
+Use an android device if it is possible. 
 Othewise
 Download the linux machine and have fun :)
